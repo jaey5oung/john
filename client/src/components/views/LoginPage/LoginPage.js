@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 import { withRouter } from 'react-router-dom';
 function LoginPage(props) {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch(); //1.유저디스패치를만들어준다 
 
     const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
@@ -18,7 +18,7 @@ function LoginPage(props) {
     }
 
     const onSubmitHandler = (event) => {
-        event.preventDefault();
+        event.preventDefault(); //이벤트리프레쉬방지
 
         let body = {
             email: Email,
